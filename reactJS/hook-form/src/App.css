@@ -1,0 +1,14 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.App {
+    width: 400px;
+    margin: 50px auto;
+}
+
+td {
+  text-align: center;
+  padding: 4px 4px;
+}
