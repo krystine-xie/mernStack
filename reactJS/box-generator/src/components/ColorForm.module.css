@@ -1,0 +1,12 @@
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    margin: 4px;
+}
+
+input {
+    margin: 4px;
+}

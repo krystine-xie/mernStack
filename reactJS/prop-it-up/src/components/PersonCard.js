@@ -16,13 +16,18 @@ class PersonCard extends React.Component {
                 <p>Age: {this.state.age}</p>
                 <p>Hair Color: {this.props.hairColor}</p>
 
-                <button onClick={ this.incrementAge } >Birthday Button for {this.props.firstName} {this.props.lastName}</button>
+                <button onClick={ (e) => this.incrementAge(e) } >Birthday Button for {this.props.firstName} {this.props.lastName}</button>
             </div>
         );
     }
 
     incrementAge() {
-        this.setState({ age: this.props.age + 1 })
+        this.setState(prevState => {
+            return {
+                ...prevState,
+                age: prevState.age + 1 
+            }
+        })
     }
 }
 

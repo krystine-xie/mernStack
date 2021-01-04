@@ -23,3 +23,8 @@
 .input {
     float: right;
 }
+
+.error {
+    color: rgb(146, 3, 3);
+    margin-left: 4px
+}
