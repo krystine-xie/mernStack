@@ -1,0 +1,6 @@
+.displayBox {
+    border: 1px solid black;
+    margin: 10px auto;
+    padding: 5px;
+    width: 300px;
+}

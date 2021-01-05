@@ -1,0 +1,14 @@
+.button {
+    background-color: white;
+    border: 1px solid black; 
+    font-weight: 600;
+    color: black;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+.button:focus {
+    background-color: black;
+    color: white;
+    outline: none;
+}
