@@ -1,4 +1,4 @@
-import React, {useReducer, useState} from 'react'; 
+import React, {useReducer, useState, useEffect} from 'react'; 
 import ToDoItem from './components/ToDoItem';
 import './App.css';
 
@@ -30,7 +30,14 @@ function reducer(toDoList, action) {
 
 function App() {
 
-    const [toDoList, dispatch] = useReducer(reducer, []);
+    const [toDoList, dispatch] = useReducer(reducer, [], () => {
+        const localData = localStorage.getItem('toDoList');
+        return localData ? JSON.parse(localData) : [];
+    });
+    useEffect(() => {
+        localStorage.setItem('toDoList', JSON.stringify(toDoList))
+    }, [toDoList]);
+
     const [name, setName] = useState('');
 
     function addNewToDo(e) {
