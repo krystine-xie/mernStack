@@ -1,0 +1,39 @@
+* {
+}
+
+h1 {
+  text-align: center;
+}
+
+.wrapperDiv {
+  margin: 50px auto;
+  width: 500px;
+}
+
+.inputDiv {
+  margin: 10px auto;
+  margin-bottom: 30px;
+  width: 300px;
+}
+
+.formInput {
+  border: 1px solid grey;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px 5px;
+  width: 96%
+}
+
+.formButton {
+  display: block;
+  font-size: 16px;
+  border: none;
+  margin-top: 5px;
+  padding: 10px 10px;
+  text-align: center;
+  width: 100%
+}
+
+form {
+  margin: 0px auto;
+}
