@@ -1,0 +1,12 @@
+button {
+  border: none;
+  background-color: rgb(129, 2, 2); 
+  color: white; 
+  font-weight: 700;
+  padding: 14px 20px;
+}
+
+.wrapper {
+  margin: 50px auto;
+  width: 300px;
+}
