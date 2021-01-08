@@ -21,8 +21,8 @@ function App() {
 
     const [content, setContent] = useState("Click on a tab to display its content!");
 
-    const toDisplay = ( stuff ) => {
-        setContent(stuff); 
+    const toDisplay = ( value ) => {
+        setContent(value); 
     }
 
     return (
