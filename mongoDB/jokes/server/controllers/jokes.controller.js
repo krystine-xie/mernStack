@@ -13,8 +13,7 @@ module.exports.findAJoke = (req, res) => {
 };
 
 module.exports.createJoke = (req, res) => {
-    const newJoke = new Joke(req.body);
-    Joke.save()
+    Joke.create(req.body)
         .then(newJoke => res.json({ joke: newJoke }))
         .catch(err => res.json({ message: "Something went wrong", error: err}));
 };

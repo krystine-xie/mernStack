@@ -46,7 +46,7 @@ const Results = (props) => {
                     />
                     : category.toLowerCase() === 'planets' ?
                     <PlanetPage planet={results} /> :
-                    ''
+                    ''  
             }
         </div>
     )
