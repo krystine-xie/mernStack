@@ -3,7 +3,8 @@ import { Link } from '@reach/router';
 
 const PersonPage = (props) => {
 
-    const { name, height, mass, hair_color, skin_color, homeworld } = props.person;
+    const { name, height, mass, hair_color, skin_color } = props.person;
+    const { homeId, homeData } = props
 
     return (
         <div>
@@ -12,7 +13,7 @@ const PersonPage = (props) => {
             <p><b>Mass: </b> {mass} kg</p>
             <p><b>Hair Color: </b> {hair_color}</p>
             <p><b>Skin Color: </b> {skin_color}</p>
-            <p><b>Homeworld: </b> {homeworld}</p>
+            <p><b>Homeworld: </b> <Link to = {`/planets/${homeId}`}> {homeData.name} </Link></p>
         </div>
     )
 }

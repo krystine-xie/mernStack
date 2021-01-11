@@ -11,7 +11,6 @@ const PokeApi = (props) => {
                 setPokemon(response.data.results)
                 console.log(response);
             })
-            
     }, []);
 
     const displayPokemon = () => {
