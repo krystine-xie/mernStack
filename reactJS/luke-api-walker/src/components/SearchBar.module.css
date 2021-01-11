@@ -1,0 +1,13 @@
+.wrapper {
+    margin: 20px auto;
+    width: 500px; 
+}
+
+.formDiv {
+    display: flex; 
+    justify-content: space-between;
+}
+
+.dropDown, .idInput {
+    margin-left: 8px;
+}
