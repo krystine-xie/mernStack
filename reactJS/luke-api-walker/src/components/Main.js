@@ -6,7 +6,7 @@ import Results from './Results';
 
 const Main = (props) => {
     const [searchInput, setSearchInput] = useState({
-        category: '',
+        category: 'people',
         id: ''
     })
 
@@ -21,7 +21,7 @@ const Main = (props) => {
         e.preventDefault();
         const { category, id } = searchInput; 
         console.log(searchInput);
-        navigate(`/${category}/${id}/`);
+        navigate(`/${category}/${id}`);
     }
 
     return (
