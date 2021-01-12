@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios'; 
+import styles from './ProductForm.module.css';
 
 const ProductForm = () => {
     const [title, setTitle] = useState(""); 
@@ -8,7 +9,7 @@ const ProductForm = () => {
 
     const onSubmitHandler = e => {
         e.preventDefault();
-        axios.post('http://localhost:8000/api/products', {
+        axios.post('http://localhost:8000/api/products/new', {
             title,
             price,
             description
@@ -19,11 +20,12 @@ const ProductForm = () => {
     }
 
     return (
-        <div>
+        <div className={styles.wrapperForm}>
             <form onSubmit={onSubmitHandler}>
                 <p>
                     <label>Title</label><br />
                     <input 
+                        className={styles.input}
                         type="text" 
                         value={title}
                         onChange ={(e) => setTitle(e.target.value)} 
@@ -32,6 +34,7 @@ const ProductForm = () => {
                 <p>
                     <label>Price</label><br />
                     <input 
+                        className={styles.input}
                         type="number" 
                         value={price}
                         step="0.01"
@@ -39,13 +42,15 @@ const ProductForm = () => {
                 </p>
                 <p>
                     <label>Description</label><br />
-                    <input 
-                        type="text"
+                    <textarea 
+                        className={styles.textArea}
                         value={description} 
                         onChange ={(e) => setDescription(e.target.value)} 
                     />
                 </p>
-                <input type="submit" />
+                <input
+                    className={styles.button}
+                    type="submit" />
             </form>
         </div>
     )
