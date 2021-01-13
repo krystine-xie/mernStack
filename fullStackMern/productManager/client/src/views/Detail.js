@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios'; 
 import styles from './Detail.module.css';
 
+import { Link } from '@reach/router';
+
 const Detail = (props) => {
     const [item, setItem] = useState({});
     
@@ -22,6 +24,8 @@ const Detail = (props) => {
             <h2>{item.title}</h2>
             <p><b>Price: </b> ${item.price}</p>
             <p><b>Description: </b>{item.description}</p>
+            <Link to={"/products/" + item._id + "/edit"}> Edit</Link><br></br>
+            <Link to={"/"}>Go Home</Link>
         </div>
     )
 }

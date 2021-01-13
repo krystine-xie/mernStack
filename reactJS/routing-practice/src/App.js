@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Home path="/home" />
         <NumberOrWord path="/:id" />
+        <Home path="/home" />
         <Colour path="/:word/:textColour/:bgColour" />
       </Router>
     </div>

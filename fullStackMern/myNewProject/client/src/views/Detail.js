@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'; 
 import axios from 'axios';
+import { Link } from '@reach/router';
 
 const Detail = (props) => {
     const [person, setPerson] = useState({});
@@ -12,6 +13,9 @@ const Detail = (props) => {
         <div>
             <p>First Name: {person.firstName}</p>
             <p>Last Name: {person.lastName}</p>
+            <Link to={"/" + person._id + "/edit"}>
+                Edit
+            </Link>
         </div>
     )
 }

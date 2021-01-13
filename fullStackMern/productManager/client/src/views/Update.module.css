@@ -1,0 +1,20 @@
+.wrapperForm {
+    margin: 0px auto;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.input {
+    width: 100%;
+}
+
+.textArea {
+    width: 100%;
+    resize: vertical;
+}
+
+.button {
+    background-color: rgb(247, 244, 244);
+    border: 1px solid grey;
+    width: 102%;
+}

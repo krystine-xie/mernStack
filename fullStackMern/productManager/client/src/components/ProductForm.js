@@ -1,22 +1,17 @@
 import React, {useState} from 'react';
-import axios from 'axios'; 
 import styles from './ProductForm.module.css';
 
-const ProductForm = () => {
-    const [title, setTitle] = useState(""); 
-    const [price, setPrice] = useState("");
-    const [description, setDescription] = useState("");
+const ProductForm = (props) => {
+
+    const { initialTitle, initialPrice, initialDescription, onSubmitProp } = props;
+
+    const [title, setTitle] = useState(initialTitle); 
+    const [price, setPrice] = useState(initialPrice);
+    const [description, setDescription] = useState(initialDescription);
 
     const onSubmitHandler = e => {
         e.preventDefault();
-        axios.post('http://localhost:8000/api/products/new', {
-            title,
-            price,
-            description
-
-        })
-            .then(res => console.log(res))
-            .catch(err => console.log(err))
+        onSubmitProp({title, price, description});
     }
 
     return (

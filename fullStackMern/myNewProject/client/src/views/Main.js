@@ -9,19 +9,30 @@ const Main = () => {
     const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api")
+        axios.get("http://localhost:8000/api/person")
             .then(res => {
                 setPeople(res.data);
                 setLoaded(true);
             })
     }, []);
 
+    const createPerson = person => {
+        axios.post('http://localhost:8000/api/person', person)
+            .then(res => {
+                setPeople([...people, res.data]);
+            }) 
+    }
+
+    const removeFromDom = personId => {
+        setPeople(people.filter(person => person._id !== personId));
+    }
+
     return (
         <div>
-            <PersonForm />
+            <PersonForm onSubmitProp={createPerson} initialFirstName="" initialLastName="" />
             <hr/ >
             {
-                loaded && <PersonList people={people} />
+                loaded && <PersonList people={people} removeFromDom={removeFromDom} />
             }
         </div>
     )
