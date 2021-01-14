@@ -12,7 +12,7 @@ const Main = () => {
     const [errors, setErrors] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/authors')
+        axios.get('http://localhost:8000/api/authors/ordered')
             .then(res => {
                 console.log(res.data);
                 setAuthors(res.data);

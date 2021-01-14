@@ -16,6 +16,12 @@ module.exports.getAllAuthors = (request, response) => {
         .catch(err => response.json(err))
 }
 
+module.exports.getAllAuthorsByLastName = (request, response) => {
+    Author.find({}, null, {sort:{lastName: 1}})
+        .then(authors => response.json(authors))
+        .catch((err) => response.status(400).json(err))
+}
+
 module.exports.getAuthor = (request, response) => {
     Author.find({_id: request.params.id})
         .then(author => response.json(author))
