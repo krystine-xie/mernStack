@@ -1,5 +1,6 @@
 import React from 'react'; 
 import axios from 'axios'; 
+import styles from './DeleteButton.module.css';
 
 const DeleteButton = props => {
     const { productId, successCallback } = props; 
@@ -11,7 +12,10 @@ const DeleteButton = props => {
     }
 
     return (
-        <button onClick={deletePerson}>
+        <button 
+            className={styles.deleteButton}
+            onClick={deletePerson}
+        >
             Delete
         </button>
     )

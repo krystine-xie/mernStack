@@ -1,0 +1,9 @@
+.editButton {
+    background-color: rgb(37, 60, 161);
+    border: none;
+    border-radius: 3px; 
+    color: white;
+    font-weight: 600; 
+    margin: 5px;
+    padding: 5px 10px;
+}

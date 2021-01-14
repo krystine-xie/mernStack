@@ -1,0 +1,14 @@
+.wrapper {
+    margin: 20px auto;
+    width: 500px; 
+}
+
+.table {
+    border: 1px solid black;
+    margin: 20px auto;
+    width: 100%;
+}
+
+th, td {
+    padding: 5px;
+}
