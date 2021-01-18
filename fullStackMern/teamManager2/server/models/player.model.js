@@ -10,17 +10,17 @@ const PlayerSchema = new mongoose.Schema({
         type: String,
         required: [false]
     }, 
-    gameOneStatus: {
+    game1Status: {
         type: String,
         default: "Not Playing",
         required: [true, "Player status is required"]
     },
-    gameTwoStatus: {
+    game2Status: {
         type: String,
         default: "Not Playing",
         required: [true, "Player status is required"]
     },
-    gameThreeStatus: {
+    game3Status: {
         type: String,
         default: "Not Playing",
         required: [true, "Player status is required"]
@@ -29,3 +29,5 @@ const PlayerSchema = new mongoose.Schema({
 }, { timestamp: true } )
 
 module.exports.Player = mongoose.model('Player', PlayerSchema);
+
+

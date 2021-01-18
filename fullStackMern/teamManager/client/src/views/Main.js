@@ -7,7 +7,7 @@ import ManageStatusPage from './ManageStatusPage';
  
 const Main = () => {
     const [players, setPlayers] = useState([]);
-    const [loaded, setLoaded] = useState([]);
+    const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
         axios.get('http://localhost:8000/api/players')

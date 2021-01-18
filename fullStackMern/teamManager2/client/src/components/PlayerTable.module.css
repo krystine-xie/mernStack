@@ -1,0 +1,41 @@
+.wrapper {
+    margin: 20px auto;
+    width: 600px;
+}
+
+table {
+    border: 1px solid black;
+    width: 100%;
+}
+
+td {
+    padding: 5px;
+}
+
+button {
+
+    border-radius: 3px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    padding: 4px;
+    margin: 4px;
+
+}
+
+.inactive {
+    background-color: white;
+    color: black;
+}
+
+.playing {
+    background-color: rgb(33, 80, 33);
+}
+
+.notPlaying, .delete {
+    background-color: rgb(155, 41, 41);
+}
+
+.undecided {
+    background-color: rgb(206, 202, 4);
+}

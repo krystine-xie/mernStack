@@ -7,7 +7,7 @@ const DeleteButton = props => {
     const { playerId, successCallback } = props;
     
     const deletePlayer = () => {
-        axios.delete(`http://localhost:8000/api/authors/${playerId}`)
+        axios.delete(`http://localhost:8000/api/players/${playerId}`)
             .then(res => {
                 successCallback(playerId);
                 navigate('/');
